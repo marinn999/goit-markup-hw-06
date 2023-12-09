@@ -57,7 +57,6 @@ button {
 
 .container {
     max-width: 320px;
-    padding: 0 16px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -73,6 +72,7 @@ button {
     align-items: center;
     justify-content: space-between;
     width: 320px;
+    padding: 0 16px;
 }
 
 .header {
@@ -430,7 +430,7 @@ screen and (min-resolution: 2dppx) {
         font-size: 56px;
         letter-spacing: 0.02em;
         line-height: 1.07;
-         margin-bottom: 36px; 
+        margin-bottom: 36px; 
         text-transform: none;
     }
     }
@@ -441,22 +441,131 @@ screen and (min-resolution: 2dppx) {
 
 @media screen and (min-width: 1158px) {
     .section-title {
-    padding: 188px 0;
-    max-width: 1440px;
-}
+        padding: 188px 0;
+        max-width: 1440px;
+    }
 
-.title-name {
-    margin-bottom: 48px;
-}
+    .title-name {
+        margin-bottom: 48px;
+    }
 
-.button {
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
+    .button {
+        transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
 
-.button:hover,
-.button:focus {
-    background-color: #404BBF;
-}
+    .button:hover,
+    .button:focus {
+        background-color: #404BBF;
+    }
 }
 /* <--=================== / SECTION 1 DESKTOP STYLES =========================--> */
 /* <--=================== / SECTION 1  =========================--> */
+
+/* <--=================== SECTION 2 STRATEGY  =========================--> */
+
+/* <--=================== SECTION 2 MOBILE STYLES  =========================--> */
+.icon-container {
+    display: none;
+}
+
+.strategy-list {
+    display: flex;
+    flex-direction: column;
+    margin: 96px 16px;
+    gap: 72px;
+    
+}
+
+.strategy-list-item {
+    display: flex;
+    width: 288px;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.title-third {
+    color: #2E2F42;
+    text-align: center;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.11;
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+}
+
+.strat-text {
+    color: #434455;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+}
+/* <--=================== / SECTION 2 MOBILE STYLES  =========================--> */
+
+/* <--=================== SECTION 2 TABLET STYLES  =========================--> */
+@media screen and (min-width: 768px) {
+    .strategy-list {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        column-gap: 24px;
+
+        }
+    .strategy-list-item {
+        width: 356px;
+    }
+}
+/* <--=================== / SECTION 2 TABLET STYLES  =========================--> */
+/* <--=================== SECTION 2 DESKTOP STYLES  =========================--> */
+@media screen and (min-width: 1158px) {
+
+    .section-strategy {
+        padding: 120px 0;
+    }
+
+    .strategy-list {
+        display: flex;
+        gap: 24px;
+        margin: 0;
+    }
+
+    .strategy-list-item {
+        width: calc((100% - 72px)/4);
+    }
+
+    .strat-text {
+        width: 264px;
+    }
+
+    .icon-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 112px;
+        border-radius: 4px;
+        border: 1px solid #8E8F99;
+        background: #F4F4FD;
+        margin-bottom: 8px;
+   
+    }
+    .title-third {
+        color: #2E2F42;
+        text-align: start;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 1.2;
+        letter-spacing: 0.02em;
+    }
+
+    .strat-text {
+        color: #434455;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 1.5;
+        letter-spacing: 0.02em;
+    }
+
+}
+
+/* <--=================== / SECTION 2 DESKTOP STYLES  =========================--> */
+/* <--=================== / SECTION 2 STRATEGY  =========================--> */
