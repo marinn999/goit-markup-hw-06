@@ -368,10 +368,19 @@ button {
     padding: 72px 0;
     background-color: #2E2F42;
     background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
-        url(../images/img-name.jpg);
+        url(../images/img-name-mobil.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+}
+
+@media screen and (min-device-pixel-ratio: 2),
+  screen and (min-resolution: 192dpi),
+  screen and (min-resolution: 2dppx) {
+    .section-title {
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+            url(../images/img-name-mobil@2x.jpg);
+    }
 }
 
 .title-name {
@@ -406,23 +415,24 @@ button {
 }
 /* <--=================== / SECTION 1 MOBILE STYLES =========================--> */
 
-@media screen and (min-device-pixel-ratio: 2),
-screen and (min-resolution: 192dpi),
-screen and (min-resolution: 2dppx) {
-    .section-title {
-        background-image: linear-gradient(
-                rgba(46, 47, 66, 0.7),
-                rgba(46, 47, 66, 0.7)),
-            url(../images/img-name@2x.jpg);
-    }
-}
 /* <--=================== SECTION 1 TABLET STYLES =========================--> */
 
 @media screen and (min-width: 768px) {
     .section-title {
         max-width: 768px;
         padding: 112px 0;
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+        url(../images/img-name-tablet.jpg);
     }
+
+    @media screen and (min-device-pixel-ratio: 2),
+  screen and (min-resolution: 192dpi),
+  screen and (min-resolution: 2dppx) {
+    .section-title {
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+            url(../images/img-name-tablet@2x.jpg);
+    }
+}
     
     .title-name {
         padding: 0;
@@ -443,6 +453,17 @@ screen and (min-resolution: 2dppx) {
     .section-title {
         padding: 188px 0;
         max-width: 1440px;
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+        url(../images/img-name-desktop.jpg);
+    }
+
+    @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+        .section-title {
+            background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+            url(../images/img-name-desktop@2x.jpg);
+        }
     }
 
     .title-name {
@@ -1125,7 +1146,25 @@ footer .container {
     stroke: #2E2F42;
     transition: stroke 250ms cubic-bezier(0.4, 0, 0.2, 1);
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
 
+.modal-close-btn:active {
+    background-color: #404BBF;
+    fill: #FFFFFF;
+    stroke: #FFFFFF;
+    border: none;
+}
+
+.review-form-input:active {
+    border-color: #4D5AE5;
+}
+
+.review-form-input:active + .review-form-input-icon {
+    fill: #4D5AE5;
+}
+
+.review-form-comment:active {
+    border-color: #4D5AE5;
 }
 
 .review-form-description {
@@ -1234,7 +1273,6 @@ footer .container {
 }
 
 .review-form-checkbox-label {
-    
     width: 231px;
     color: #8E8F99;
     font-size: 12px;
@@ -1280,37 +1318,48 @@ footer .container {
 }
 /* <--=========================== / MODAL MOBILE ==============================--> */
 /* <--=========================== MODAL TABLET ==============================--> */
+@media screen and (min-width: 768px) {
+    .modal {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 408px;
+        min-height: 584px;
+        padding: 72px 24px 24px 24px;
+     }
+
+     .review-form-description {
+        width: 360px;
+    }
+
+    .review-form-input {
+        width: 360px;
+        padding-left: 38px;
+    }
+
+    .review-form-checkbox-label {
+        width: 338px;
+        color: #8E8F99;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 1.17;
+        letter-spacing: 0.04em;
+    }
+
+    .review-form-checkbox-wrapper {
+        margin-bottom: 24px;
+    }
+}
+
 /* <--=========================== / MODAL TABLET ==============================--> */
 /* <--=========================== MODAL DESKTOP ==============================--> */
 @media screen and (min-width: 1158px) {
-.modal {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 408px;
-    min-height: 584px;
-
-    padding: 72px 24px 24px 24px;
- }
-
 .modal-close-btn:hover, .modal-close-btn:focus {
     background-color: #404BBF;
     stroke: #FFFFFF;
     fill: #FFFFFF;
     border: none;
-}
-
-.review-form-description {
-    width: 360px;
-}
-
-.review-form-input {
-    width: 360px;
- 
-   
-    padding-left: 38px;
-   
 }
 
 .review-form-input:focus {
@@ -1325,54 +1374,9 @@ footer .container {
     border-color: #4D5AE5;
 }
 
-.review-form-checkbox-label {
-    width: 338px;
-    color: #8E8F99;
-    font-size: 12px;
-    font-weight: 400;
-    line-height: 1.17;
-    letter-spacing: 0.04em;
-}
-
-.review-form-checkbox-wrapper {
-    margin-bottom: 24px;
-}
-
-.privacy-policy-link {
-    color: #4D5AE5;
-    font-size: 12px;
-    font-weight: 400;
-    line-height: 1.33;
-    letter-spacing: 0.04em;
-    text-decoration-line: underline;
-}
-
-.review-form-submit-btn {
-    display: block;
-    min-width: 169px;
-    color: #FFF;
-    text-align: center;
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 1.5;
-    letter-spacing: 0.04em;
-    padding: 16px 32px;
-    background-color: #4D5AE5;
-    border-radius: 4px;
-    border: none;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    margin-right: auto;
-    margin-left: auto;
-    margin-bottom: 24px;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
 .review-form-submit-btn:hover, .review-form-submit-btn:focus {
     background-color: #404BBF;
 }
+}
 /* <--=========================== / MODAL ==============================--> */
 
-}
